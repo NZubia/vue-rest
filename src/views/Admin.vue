@@ -1,7 +1,6 @@
 <template>
   <div class="home mt-5">
     <h1 class="mt-5">Administration View</h1>
-
   </div>
 </template>
 

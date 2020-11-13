@@ -17,12 +17,18 @@ const mutations = {
     SET_CURRENT_SECTION(state, newSection){
         state.currentSection = newSection;
 
-        if (newSection === 'Admin') {
-            state.currentLinks = [
-                { name: "Dishes", path: "admin/dish" }
-            ];
-        } else {
-            state.currentLinks = [];
+        switch (newSection){
+            case 'Admin':
+            case 'Dishes':
+            case 'Tables':
+                state.currentLinks = [
+                    { name: "Dishes", path: "admin/dishes" },
+                    { name: "Tables", path: "admin/tables" }
+                ];
+                break;
+            default:
+                state.currentLinks = [];
+                break;
         }
     },
 
